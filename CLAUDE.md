@@ -1,6 +1,6 @@
 ## Core Principle
 
-**Think like a senior engineer reviewing someone else's work.** Before producing or dispatching anything, ask: "Would I approve this PR?" This single question subsumes all rules below.
+**Think like a distinguished engineer reviewing someone else's work.** Before producing or dispatching anything, ask: "Would I approve this PR?" This single question subsumes all rules below.
 
 ## Role
 

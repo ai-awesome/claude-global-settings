@@ -10,28 +10,25 @@ A collection of opinionated global settings for [Claude Code](https://docs.anthr
 
 ## Installation
 
-Clone this repository:
+### Fresh install (no existing ~/.claude)
 
 ```sh
-git clone https://github.com/ai-awesome/claude-global-settings.git
+git clone git@github.com:ai-awesome/.claude.git ~/.claude
 ```
 
-Then symlink or copy the files into your Claude global config directory:
+### Existing ~/.claude directory
+
+If you have already run Claude Code, `~/.claude/` already exists. Initialize it as a git repo instead:
 
 ```sh
-ln -sf "$(pwd)/claude-global-settings/CLAUDE.md" ~/.claude/CLAUDE.md
-ln -sf "$(pwd)/claude-global-settings/settings.json" ~/.claude/settings.json
-ln -sf "$(pwd)/claude-global-settings/agents" ~/.claude/agents
+cd ~/.claude
+git init
+git remote add origin git@github.com:ai-awesome/.claude.git
+git fetch origin
+git checkout -b main origin/main
 ```
 
-If you manage your dotfiles in a separate repository, add this as a submodule:
-
-```sh
-cd your-dotfiles-repo
-git submodule add https://github.com/ai-awesome/claude-global-settings.git claude-global-settings
-```
-
-Then symlink from the submodule path into `~/.claude/` as shown above.
+This pulls down all config files (CLAUDE.md, settings.json, agents/, hooks/, skills/, etc.) without conflicting with files Claude Code may have already created.
 
 ## Customization
 

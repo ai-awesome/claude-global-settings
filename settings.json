@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "say 'Construction in progress.'"
+            "command": "$HOME/.claude/scripts/try-say.sh 'Construction in progress.'"
           }
         ]
       }
@@ -17,7 +17,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "say 'Good day, commander. I am here!'"
+            "command": "$HOME/.claude/scripts/try-say.sh 'Good day, commander. I am here!'"
           }
         ]
       }
@@ -27,7 +27,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "say \"$(cat /dev/stdin | jq -r '.last_assistant_message' | head -1)\""
+            "command": "$HOME/.claude/scripts/try-say.sh \"$(cat /dev/stdin | jq -r '.last_assistant_message' | head -1)\""
           }
         ]
       }
